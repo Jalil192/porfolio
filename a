@@ -1,0 +1,58 @@
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Empêche l'envoi du formulaire
+
+            let isValid = true;
+
+            // Réinitialisation des messages d'erreur
+            document.getElementById('nomError').textContent = '';
+            document.getElementById('prenomError').textContent = '';
+            document.getElementById('mailError').textContent = '';
+            document.getElementById('messageError').textContent = '';
+
+            // Validation du champ Nom
+            const nom = document.getElementById('nom').value.trim();
+            if (nom === '') {
+                document.getElementById('nomError').textContent = 'Le nom est requis.';
+                isValid = false;
+            }
+
+            // Validation du champ Prénom
+            const prenom = document.getElementById('prenom').value.trim();
+            if (prenom === '') {
+                document.getElementById('prenomError').textContent = 'Le prénom est requis.';
+                isValid = false;
+            }
+
+            // Validation de l'email
+            const mail = document.getElementById('mail').value.trim();
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (mail === '') {
+                document.getElementById('mailError').textContent = 'L\'email est requis.';
+                isValid = false;
+            } else if (!emailPattern.test(mail)) {
+                document.getElementById('mailError').textContent = 'Veuillez entrer un email valide.';
+                isValid = false;
+            }
+
+            // Validation du message
+            const message = document.getElementById('message').value.trim();
+            if (message === '') {
+                document.getElementById('messageError').textContent = 'Le message est requis.';
+                isValid = false;
+            }
+
+            // Si tout est valide, afficher un message de succès
+            if (isValid) {
+                alert('Formulaire soumis avec succès!');
+                // Ici, vous pouvez envoyer les données au serveur si nécessaire.
+                e.target.submit();
+            }
+        });
+
+
+// Sélection du bouton et basculement entre les modes
+document.getElementById('toggleDarkMode').addEventListener('click', function () {
+    document.body.classList.toggle('dark-mode');
+    const isDarkMode = document.body.classList.contains('dark-mode');
+    this.textContent = isDarkMode ? 'Mode Clair' : 'Mode Sombre'; // Met à jour le texte du bouton
+});
