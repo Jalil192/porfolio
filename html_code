@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Jalil</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+    <nav class="navbar navbar-expand-md navbar-light bg-light py-3">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="images/logo.jpeg" alt="Logo" width="40" height="40" class="me-2">
+                
+            </a>
+
+
+            <!-- Bouton hamburger (visible sur mobile) -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Menu principal -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto text-center text-md-start">
+                        <a class="nav-link" href="#home">Accueil</a>
+                        <a class="nav-link" href="#projects">Projets</a>
+                        <a class="nav-link" href="#skills">Compétences</a>
+                        <a class="nav-link" href="#about">À propos</a>
+                        <a class="nav-link" href="#contact">Contact</a>
+                </ul>
+            </div>
+        </div>
+    </nav>
+     <button id="toggleDarkMode" class="btn btn-secondary">Mode Sombre</button>
+    </header>
+
+
+       <section id="home">
+        <div class="intro">
+            <img src="images/avatar.jpeg" alt="Photo de profil" class="profile-picture">
+            <h1>Bienvenue ! Je m'appelle Jalil Keddara</h1>
+            <p>J'ai 19 ans et je suis un etudiant en licence en informatique à Sorbonne Universite .</p>
+            <a href="assets/cv.pdf" download class="btn">Télécharger mon CV</a>
+        </div>
+    </section>
+
+
+    <section id="projects" class="p-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Mes Projets</h2>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="card">
+                    <img src="images/project1.jpeg" class="img-fluid card-img-top" alt="Projet 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Projet 1 : Portfolio</h5>
+                        <p class="card-text">Un portfolio moderne et responsive.</p>
+                          <a href="https://github.com/Jalil192/portfolio" target="_blank" class="btn btn-primary">Voir plus</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card">
+                    <img src="images/project.jpeg" class="img-fluid card-img-top" alt="Projet 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Projet 2 : Tp Mesures</h5>
+                        <p class="card-text">Etude de photons avec interaction complexe entre matièere et et lumière.</p>
+                             <a href="https://github.com/Jalil192/portfolio" target="_blank" class="btn btn-primary">Voir plus</a>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card">
+                    <img src="images/project2.jpeg" class="img-fluid card-img-top" alt="Projet 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Projet 3 : Ecosysteme en C </h5>
+                        <p class="card-text">Etude faite pour simuler un ecosystème où des proies et des prédateurs cohabitent.</p>
+                            <a href="https://github.com/Jalil192/portfolio" target="_blank" class="btn btn-primary">Voir plus</a>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="skills" class="p-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-4">Mes Compétences</h2>
+        <div class="row g-4">
+            <!-- Compétence: JavaScript -->
+            <div class="col-md-4 col-sm-6 text-center">
+                <div class="skill-card p-3 border rounded shadow-sm">
+                    <div class="skill-icon js-icon"></div>
+                    <h4 class="mt-3">JavaScript</h4>
+                    <p>Ajout d'interactivité et de dynamisme aux applications web.</p>
+                </div>
+            </div>
+            <!-- Compétence: CSS -->
+            <div class="col-md-4 col-sm-6 text-center">
+                <div class="skill-card p-3 border rounded shadow-sm">
+                    <div class="skill-icon css-icon"></div>
+                    <h4 class="mt-3">CSS</h4>
+                    <p>Création de designs modernes et responsives.</p>
+                </div>
+            </div>
+            <!-- Compétence: HTML -->
+            <div class="col-md-4 col-sm-6 text-center">
+                <div class="skill-card p-3 border rounded shadow-sm">
+                    <div class="skill-icon html-icon"></div>
+                    <h4 class="mt-3">HTML</h4>
+                    <p>Structure et contenu sémantiques des pages web.</p>
+                </div>
+            </div>
+            <!-- Compétence: Python -->
+            <div class="col-md-4 col-sm-6 text-center">
+                <div class="skill-card p-3 border rounded shadow-sm">
+                    <div class="skill-icon python-icon"></div>
+                    <h4 class="mt-3">Python</h4>
+                    <p>Développement orienté objets et analyse de données.</p>
+                </div>
+            </div>
+            <!-- Compétence: Java -->
+            <div class="col-md-4 col-sm-6 text-center">
+                <div class="skill-card p-3 border rounded shadow-sm">
+                    <div class="skill-icon java-icon"></div>
+                    <h4 class="mt-3">Java</h4>
+                    <p>Applications robustes et multi-plateformes.</p>
+                </div>
+            </div>
+            <!-- Compétence: C -->
+            <div class="col-md-4 col-sm-6 text-center">
+                <div class="skill-card p-3 border rounded shadow-sm">
+                    <div class="skill-icon c-icon"></div>
+                    <h4 class="mt-3">C</h4>
+                    <p>Programmation bas-niveau pour une performance optimale.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="p-5 bg-white">
+    <div class="container">
+        <h2 class="text-center mb-4">À propos de moi</h2>
+        <div class="row align-items-center">
+            <!-- Texte de présentation -->
+            <div class="col-md-7">
+                <h3>Jalil Keddara</h3>
+                <p class="lead">Étudiant en informatique, passionné par le développement web et les nouvelles technologies.</p>
+                <p>
+                    Je suis actuellement en licence d'informatique à Sorbonne Université, où je développe mes compétences
+                    en programmation et en conception web. Mon objectif est de poursuivre un master à la même université pour approfondir mes connaissances.
+                </p>
+                <h4>Formation</h4>
+                <p>
+                    J’ai obtenu un baccalauréat scientifique (S) avec mention *Bien* en 2023, au lycée Paul Langevin à Suresnes, 
+                    où j'ai grandi et vécu toute ma vie.
+                </p>
+                <h4>Expérience professionnelle</h4>
+                <ul>
+                    <li><u>Employé de rayon hygiène</u> – Travail chez E.Leclerc, gestion des stocks et rayons (2024).</li>
+                    <li><u>Employé polyvalent</u> – Travail chez McDonald's, service client et préparation (2024).</li>
+                     <li><u>Soutient scolaire en mathématiques</u> – Donner des cours partticuliers ou de soutient en mathématiques niveau lycée.</li>
+                </ul>
+                <h4>Centres d'intérêt</h4>
+                <ul>
+                    <li><i>Sport :</i> Je joue au foot régulièrement que cela soit avec mes amis ou en club.</li>
+                    <li><i>Jeux vidéo :</i> Grand amateur de gaming, j'aime jouer en ligne avec mes amis.</li>
+                    <li><i>Cinéma :</i> Grand passioné de films et séries, je me rends régulièrement au cinéma quand le temps me le permet ou sinon je regarde mes séries et films préférés sur les applications de streaming.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="contact" class="p-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-4">Formulaire de Contact</h2>
+        <form id="contactForm">
+             <div class="row">
+                 <div class="col-sm-12 col-md-6">
+                <label for="nom">Nom:</label>
+                <input type="text" id="nom" name="nom" placeholder="Votre nom">
+                <div class="error" id="nomError"></div>
+            </div>
+             <div class="col-sm-12 col-md-6">
+                <label for="prenom">Prénom:</label>
+                <input type="text" id="prenom" name="prenom" placeholder="Votre prénom">
+                <div class="error" id="prenomError"></div>
+            </div>
+             <div class="col-sm-12 col-md-6">
+                <label for="mail">Email:</label>
+                <input type="email" id="mail" name="mail" placeholder="Votre email">
+                <div class="error" id="mailError"></div>
+            </div>
+             <div class="col-sm-12 col-md-6">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" placeholder="Votre message"></textarea>
+                <div class="error" id="messageError"></div>
+            </div>
+            <button type="submit">Envoyer</button>
+        </form>
+    
+
+    <div class="mt-5">
+            <h3 class="text-center mb-3">Mes Réseaux Sociaux</h3>
+            <div class="social-links d-flex justify-content-center gap-3 flex-wrap">
+                <!-- GitHub -->
+                <a href="https://github.com/Jalil192" class="btn-social github" target="_blank" aria-label="GitHub">
+                    GitHub
+                </a>
+
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/jalil-keddara-0895ab334/" class="btn-social linkedin" target="_blank" aria-label="LinkedIn">
+                    LinkedIn
+                </a>
+
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/jalil92.1/" class="btn-social instagram" target="_blank" aria-label="Instagram">
+                    Instagram
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer Section -->
+<footer class="footer bg-dark text-center text-white py-4">
+    <div class="container">
+        <!-- Liens de navigation rapides vers les sections -->
+        <div class="footer-links mb-3">
+            <a href="#home" class="text-white mx-2">Accueil</a>
+            <a href="#projects" class="text-white mx-2">Projets</a>
+            <a href="#skills" class="text-white mx-2">Compétences</a>
+            <a href="#about" class="text-white mx-2">À propos</a>
+            <a href="#contact" class="text-white mx-2">Contact</a>
+        </div>
+        <!-- Copyright et mentions légales -->
+        <p>&copy; 2024 Jalil Keddara. Tous droits réservés.</p>
+        <p>
+            <small>
+                <a href="#mentions" class="text-white">Mentions légales</a> | 
+                <a href="#privacy" class="text-white">Politique de confidentialité</a>
+            </small>
+        </p>
+    </div>
+</footer>
+
+
+
+<script src="scripts/mon_javascript.js"></script>
+</body>
