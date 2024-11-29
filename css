@@ -1,0 +1,800 @@
+body {
+    background-color: lightcyan;
+}
+
+
+/* Général */
+header {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    background-color: skyblue; 
+    border-bottom: 2px solid skyblue; /* Ligne de séparation sous la navbar */
+}
+
+.navbar-nav {
+    display: flex;
+    flex-wrap: wrap; /* Permet d'adapter les éléments en colonne sur petits écrans */
+    justify-content: space-around; /* Répartit les éléments sur toute la largeur */
+    gap: 20px; /* Espacement entre les éléments */
+    padding: 0;
+    list-style: none;
+}
+
+.navbar-brand img {
+    border-radius: 5%;
+    background-color: #f8f9fa;
+}
+
+.navbar-nav .nav-item {
+    display: flex;
+    align-items: center;
+    padding: 0 10px; /* Espacement horizontal */
+    border-right: 1px solid #ddd; /* Bordure séparant les items */
+}
+
+.navbar-nav .nav-item:last-child {
+    border-right: none; /* Pas de bordure pour le dernier élément */
+}
+
+/* Version mobile avec Bootstrap classes intégrées */
+.navbar-collapse {
+    display: flex;
+    flex-direction: column; /* Sur mobile, transforme les éléments en colonne */
+    align-items: center; /* Centre les liens */
+    gap: 15px; /* Espacement entre les éléments */
+}
+
+.navbar-toggler {
+    display: block;
+    border: 1px solid #007bff;
+}
+
+.navbar-toggler-icon {
+    width: 30px;
+    height: 3px;
+    background-color: #007bff; /* Couleur bleue pour le bouton hamburger */
+    display: inline-block;
+    margin: 6px 0; /* Espacement entre les barres du hamburger */
+}
+
+/* Réutilisation cohérente des styles pour les liens */
+.navbar-nav .nav-link {
+    font-weight: bold;
+    text-decoration: none;
+    color: #333; /* Texte gris foncé */
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    padding: 5px 10px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #fff;
+    background-color: #007bff; /* Fond bleu au survol */
+    border-radius: 5px; /* Coins arrondis */
+}
+
+/* Bouton du mode sombre dans le header */
+#toggleDarkMode {
+    background-color: skyblue;
+    color: #fff;
+    border: 1px solid #666;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer ;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#toggleDarkMode:hover {
+    background-color: #333;
+    color: #e0e0e0;
+}
+
+
+/* Section Home */
+#home {
+    padding: 4rem 1rem;
+    background-color: lightcyan;
+    text-align: center;
+    border-bottom: 2px solid skyblue;
+}
+
+
+
+/* Image de profil */
+.profile-picture {
+    width: 20%;
+    max-width: 150px;
+    margin: 0 auto 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Titre principal */
+#home h1 {
+    font-size: calc(1.5rem + 1vw);
+    color: #333;
+    margin: 20px 0;
+    font-weight: bold;
+}
+
+/* Texte de présentation */
+#home p {
+    font-size: calc(0.9rem + 0.5vw);
+    color: #666;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+}
+
+/* Bouton Télécharger le CV */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    color: #fff;
+    background-color: #007bff;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Style général pour les sections */
+section {
+    padding: 60px 20px; /* Espacement vertical et horizontal */
+    background-color: lightcyan; /* Fond gris clair */
+}
+
+/* Titres de section */
+section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333; /* Couleur principale */
+    font-weight: bold;
+}
+
+section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555; /* Texte secondaire */
+}
+
+
+
+/* Section des projets */
+#projects {
+    background-color: lightcyan;
+    padding: 3rem 0;
+    border-bottom: 2px solid skyblue;
+}
+
+
+/* Cartes de projet */
+.card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Images dans les cartes */
+.card-img-top {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Contenu des cartes */
+.card-body {
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 0.75rem;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+/* Boutons */
+.card .btn {
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.card .btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+#skills{
+    background-color: lightcyan;
+    border-bottom: 2px solid skyblue;
+}
+
+.skill-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.skill-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 10px auto;
+    border-radius: 50%;
+    position: relative;
+}
+
+/* JavaScript Icon */
+.js-icon {
+    background: #f0db4f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.js-icon::after {
+    content: "JS";
+    color: #323330;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* CSS Icon */
+.css-icon {
+    background: #2965f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.css-icon::after {
+    content: "CSS";
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* HTML Icon */
+.html-icon {
+    background: #e44d26;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.html-icon::after {
+    content: "HTML";
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Python Icon */
+.python-icon {
+    background: #3776ab;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.python-icon::after {
+    content: "PY";
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Java Icon */
+.java-icon {
+    background: #5382a1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.java-icon::after {
+    content: "JAVA";
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* C Icon */
+.c-icon {
+    background: #555555;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.c-icon::after {
+    content: "C";
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+
+/* Section À propos */
+#about {
+    background-color: lightcyan;
+    padding: 3rem 0;
+    color: #333;
+    border-bottom: 2px solid skyblue;
+}
+
+/* Titre principal de la section */
+#about h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #007bff;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    text-align: center; /* Centrer le titre */
+}
+
+/* Conteneur de l'image */
+#about .img-fluid {
+    max-width: 100%;
+    height: auto;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+/* Colonne contenant l'image et le texte */
+#about .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;  /* Centrer le texte par défaut */
+}
+
+#about .col-md-5 {
+    flex: 1 1 40%; /* Définit une largeur maximale de 40% pour l'image */
+    padding: 1rem;
+}
+
+#about .col-md-7 {
+    flex: 1 1 60%; /* Définit une largeur maximale de 60% pour le texte */
+    padding: 1rem;
+}
+
+/* Nom de la personne */
+#about h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #007bff;
+    margin-bottom: 1rem;
+}
+
+/* Texte de présentation */
+#about .lead {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+/* Détails supplémentaires */
+#about h4 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-top: 2rem;
+    color: #007bff;
+}
+
+#about p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+#about ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#about ul li {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+#about ul li i {
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Flexbox pour assurer une disposition fluide des colonnes */
+#about .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;  /* Permet aux colonnes de se réorganiser si nécessaire */
+}
+
+
+/* Style général pour la section Contact */
+#contact {
+    background-color: lightcyan; /* Fond léger pour la section */
+    padding: 5rem 0;
+    border-bottom: 2px solid skyblue;
+}
+
+/* Titres de la section */
+#contact h2,
+#contact h3 {
+    color: #007bff;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+}
+
+/* Mise en page du formulaire */
+#contact form {
+    background-color: skyblue;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Espacement entre les champs de formulaire */
+#contact .form-group {
+    margin-bottom: 1.5rem;
+}
+
+/* Champs de formulaire */
+#contact input,
+#contact textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 1rem;
+    color: #495057;
+}
+
+
+
+/* Bouton d'envoi */
+#contact button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+/* Changement de couleur du bouton au survol */
+#contact button:hover {
+    background-color: #0056b3;
+}
+
+/* Affichage des messages d'erreur */
+.error {
+    color: palevioletred;
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+}
+
+/* Style pour les liens des réseaux sociaux */
+#contact .social-links {
+    margin-top: 3rem;
+}
+
+/* Liens des boutons sociaux */
+#contact .btn-social {
+    padding: 10px 20px;
+    color: white;
+    font-size: 1.1rem;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+/* Couleurs spécifiques pour chaque réseau */
+.github {
+    background-color: #333; /* GitHub couleur */
+}
+
+.linkedin {
+    background-color: #0077b5; /* LinkedIn couleur */
+}
+
+.instagram {
+    background-color: #e4405f; /* Instagram couleur */
+}
+
+/* Effet au survol */
+.btn-social:hover {
+    opacity: 0.5; /* Gère la transparence  */
+}
+
+/* Ajout des "icônes" en utilisant ::before */
+.github::before {
+    content: "🐙 "; /* Remplacer par un symbole GitHub */
+}
+
+.linkedin::before {
+    content: "🔗 "; /* Remplacer par un symbole LinkedIn */
+}
+
+.instagram::before {
+    content: "📷 "; /* Remplacer par un symbole Instagram */
+}
+
+
+
+
+/* Footer style */
+.footer {
+    background-color: skyblue; /* Couleur de fond grise foncée */
+    color: black; /* Couleur du texte */
+    font-size: 0.9rem;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer-links a {
+    color: black; /* Couleur des liens */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: black; /* Couleur blanche au survol */
+}
+
+.footer p {
+    margin: 0.5rem 0; /* Espacement vertical entre les paragraphes */
+    color: black; /* Couleur du texte */
+}
+
+.footer a {
+    text-decoration: none;
+    color: black;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+
+
+/* Mode sombre */
+.dark-mode {
+    background-color: #000; /* Fond noir */
+    color: #0f0; /* Texte vert */
+}
+
+/* Header en mode sombre */
+.dark-mode header {
+    background-color: black; /* Fond légèrement gris pour différencier */
+    color: #0f0; /* Texte vert */
+    box-shadow: 0 4px 6px rgba(0, 255, 0, 0.2); /* Ombre verte subtile */
+    border-bottom: 2px solid green;
+}
+
+.dark-mode .navbar {
+    background-color: black; /* Fond sombre */
+    border-bottom: 2px solid #0f0; /* Ligne verte */
+}
+
+.dark-mode .navbar-nav .nav-link {
+    color: #0f0; /* Texte vert */
+}
+
+.dark-mode .navbar-nav .nav-link:hover {
+    background-color: #0a0; /* Vert foncé au survol */
+    color: #fff; /* Texte blanc */
+}
+
+/* Bouton du mode sombre */
+.dark-mode #toggleDarkMode {
+    background-color: #0a0;
+    color: #000;
+}
+
+/* Section Home */
+.dark-mode #home {
+    background-color: #000;
+    color: #0f0;
+    border-bottom: 2px solid #0f0;
+}
+
+.dark-mode #home h1 {
+    color: white;
+}
+
+.dark-mode #home p {
+    color: white;
+}
+
+.dark-mode .card-title {
+    color: #0f0; /* Couleur verte */
+}
+
+
+/* Texte des sections */
+.dark-mode section h2,
+.dark-mode section p {
+    color: white;
+}
+
+/* Boutons */
+.dark-mode .btn {
+    background-color: #0f0;
+    color: #000;
+}
+
+.dark-mode .btn:hover {
+    background-color: #0a0;
+    color: #fff;
+}
+
+.dark-mode #projects {
+    background-color: #000;
+    padding: 3rem 0;
+    border-bottom: 2px solid green;
+}
+
+/* Cartes de projet */
+.dark-mode .card {
+    background-color: #111;
+    color: #0f0;
+    box-shadow: 0 4px 8px rgba(0, 255, 0, 0.2);
+}
+
+.dark-mode .card .btn {
+    background-color: #0f0;
+    color: #000;
+}
+
+.dark-mode .card .btn:hover {
+    background-color: #0a0;
+    color: #fff;
+}
+
+.dark-mode #skills {
+    background-color: #000;
+    border-bottom: 2px solid green;
+}
+
+/* Section "À propos" */
+.dark-mode #about {
+    background-color: #000;
+    border-bottom: 2px solid green;
+}
+
+/* Section "À propos" */
+.dark-mode #about h2 {
+    color: white;
+}
+
+.dark-mode #about h4{
+    color: #0f0;
+}
+
+.dark-mode #about p{
+    color: white;
+}
+
+.dark-mode #about h3{
+    color: #0f0;
+}
+
+/* Mode sombre : LI avec I dans la section #about */
+.dark-mode #about li i {
+    color: #0f0; /* Texte blanc */
+}
+
+
+/* Mode sombre : UL et LI spécifiques à la section #about */
+.dark-mode #about ul,
+.dark-mode #about ul li {
+    color: white; /* Texte en vert */
+}
+
+
+/* Section Contact */
+.dark-mode #contact {
+    background-color: #000;
+    color: #0f0;
+    border-bottom: 2px solid green;
+}
+
+.dark-mode #contact form {
+    background-color: #111;
+    border: 1px solid #0f0;
+}
+
+.dark-mode #contact input,
+.dark-mode #contact textarea {
+    background-color: #222;
+    color: #0f0;
+    border: 1px solid #0f0;
+}
+
+.dark-mode #contact button {
+    background-color: #0f0;
+    color: #000;
+}
+
+.dark-mode #contact button:hover {
+    background-color: #0a0;
+    color: #fff;
+}
+
+.dark-mode #contact h2{
+    color: #fff;
+}
+
+
+.dark-mode #contact h3 {
+    color: #fff;
+}
+
+/* Mode sombre : Texte du footer en vert */
+.dark-mode footer {
+    color: #00ff00; /* Texte vert */
+    background-color: black;
+}
+
+.dark-mode footer a {
+    color: #00ff00; /* Liens en vert */
+}
+
+.dark-mode footer a:hover {
+    text-decoration: underline; /* Soulignement au survol pour accessibilité */
+    color: #00ff00;
+}
+
+.dark-mode footer p {
+    color: #00ff00; 
+}
+
+/* Liens des réseaux sociaux */
+.dark-mode .btn-social {
+    background-color: #0f0;
+    color: #000;
+}
+
+.dark-mode .btn-social:hover {
+    background-color: #0a0;
+    color: #fff;
+}
